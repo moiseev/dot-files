@@ -142,6 +142,11 @@ function! UnCommentLine()
   " for .cpp or .hpp or .java files use //
   if file_name =~ '\.cpp$' || file_name =~ '\.hpp$' || file_name =~ '\.java$' || file_name =~ '\.php[23]\?$' || file_name =~ '\.cs$' || file_name =~ '\.fs[x|i]\?$'
     execute ":silent! normal :nohlsearch\<CR>:s/\\/\\///\<CR>:nohlsearch\<CR>=="
+
+  " for Haskell files use --
+  elseif file_name =~ '\.hs$' || file_name =~ '\.lhs' || file_name =~ '\.hsc' || file_name =~ '\.cabal$'
+    execute ":silent! normal :nohlsearch\<CR>:s/--//\<CR>:nohlsearch\<CR>=="
+
   " for .c or .h or .pc or .css files use /* */
   elseif file_name =~ '\.c$' || file_name =~ '\.h$' || file_name =~ '\.pc$' || file_name =~ '\.css$' || file_name =~ '\.js$'
     execute ":silent! normal :nohlsearch\<CR>:s/\\/\\*//\<CR>:s/\\*\\///\<CR>:nohlsearch\<CR>=="
