@@ -149,7 +149,7 @@ nmap <Leader>N :NERDTreeClose<CR>
 let NERDTreeIgnore=['\.pyc$', '\.pyo$', '\.obj$']
 let NERDTreeShowFiles=1
 let NERDTreeShowHidden=1
-let NERDTreeQuitOnOpen=1
+let NERDTreeQuitOnOpen=0
 let NERDTreeHighlightCursorLine=1
 
 " Make shift-insert work like in Xterm
