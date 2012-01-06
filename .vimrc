@@ -107,7 +107,11 @@ nnoremap <silent> <Leader>cd :cd %:h<CR>
 nnoremap <silent> <Leader>rm :%s/\r//g<CR>:g/^$/d<CR>
 nnoremap <silent> <Leader>\ :s/\\/\\\\/g<CR>
 
-nmap <silent> <C-Tab> :bnext<CR>
+if has('unix')
+    nmap <silent> <S-Tab> :bnext<CR>
+else
+    nmap <silent> <C-Tab> :bnext<CR>
+endif
 nmap <silent> <C-S-Tab> :bprevious<CR>
 nmap <C-F4> :bd<CR>
 
