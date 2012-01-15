@@ -40,10 +40,13 @@ set bs=indent,eol,start
 
 if has('unix')
     set guifont=Monaco:h12
+    set shell=/bin/zsh
 elseif has('win32')
     set guifont=consolas:h12:cRUSSIAN
     "set guifont=Monaco:h10
     "set guifont=Monofur:h14
+    set shell=powershell
+    set shellslash
 endif
 
 " Only do this for Vim version 5.0 and later.
@@ -75,19 +78,6 @@ filetype on
 filetype plugin on
 filetype indent on
 
-if has('win32')
-    " setting environment variables to suport Visual Studio 2008 command line tools
-    let $PATH.=";C:\\Program Files\\Microsoft Visual Studio 9.0\\Common7\\IDE;C:\\Program Files\\Microsoft Visual Studio 9.0\\VC\\BIN;C:\\Program Files\\Microsoft Visual Studio 9.0\\Common7\\Tools;C:\\WINDOWS\\Microsoft.NET\\Framework\\v3.5;C:\\WINDOWS\\Microsoft.NET\\Framework\\v2.0.50727;C:\\Program Files\\Microsoft Visual Studio 9.0\\VC\\VCPackages;"
-    let $INCLUDE.=";C:\\Program Files\\Microsoft Visual Studio 9.0\\VC\\ATLMFC\\INCLUDE;C:\\Program Files\\Microsoft Visual Studio 9.0\\VC\\INCLUDE;"
-    let $LIB.=";C:\\Program Files\\Microsoft Visual Studio 9.0\\VC\\ATLMFC\\LIB;C:\\Program Files\\Microsoft Visual Studio 9.0\\VC\\LIB;"
-    let $LIBPATH.=";C:\\WINDOWS\\Microsoft.NET\\Framework\\v3.5;C:\\WINDOWS\\Microsoft.NET\\Framework\\v2.0.50727;C:\\Program Files\\Microsoft Visual Studio 9.0\\VC\\ATLMFC\\LIB;C:\\Program Files\\Microsoft Visual Studio 9.0\\VC\\LIB;"
-    " python libraries path
-    let $PYTHONPATH="C:\\Python24\\Lib\\;C:\\Program Files\\Python24\\Lib\\;"
-
-    set shell=powershell
-    set shellslash
-endif
-
 let g:tex_flavor='latex'
 
 let mapleader=","
@@ -107,13 +97,9 @@ nnoremap <silent> <Leader>cd :cd %:h<CR>
 nnoremap <silent> <Leader>rm :%s/\r//g<CR>:g/^$/d<CR>
 nnoremap <silent> <Leader>\ :s/\\/\\\\/g<CR>
 
-if has('unix')
-    nmap <silent> <S-Tab> :bnext<CR>
-else
-    nmap <silent> <C-Tab> :bnext<CR>
-endif
-nmap <silent> <C-S-Tab> :bprevious<CR>
-nmap <C-F4> :bd<CR>
+nmap <silent> <S-Tab> :bnext<CR>
+"nmap <C-F4> :bd<CR>
+nmap <silent> <Leader>w :bd<CR>
 
 " Encloses text under cursor/selection/whatever with specified brackets
 "   o -- open bracket
