@@ -41,12 +41,20 @@ set bs=indent,eol,start
 if has('unix')
     set guifont=Monaco:h12
     set shell=/bin/zsh
+
+    let s:uname = system("echo -n \"$(uname)\"")
+    if !v:shell_error && s:uname == "Linux"
+        colo zenburn
+    else
+        colo vividchalk
+    endif
 elseif has('win32')
     set guifont=consolas:h12:cRUSSIAN
     "set guifont=Monaco:h10
     "set guifont=Monofur:h14
     set shell=powershell
     set shellslash
+    colo vivdchalk
 endif
 
 " Only do this for Vim version 5.0 and later.
@@ -69,9 +77,6 @@ if version >= 500
   highlight CursorColumn guibg=#ffffe0
   
   set cursorline
-  "colo ir_black
-  "colo zenburn
-  colo mustang
 endif
 
 filetype on
