@@ -38,6 +38,24 @@ set undolevels=1000      " use many muchos levels of undo
 set incsearch
 set bs=indent,eol,start
 
+let c_comment_strings=1
+
+if !exists("syntax_on")
+    syntax on
+endif
+
+set hlsearch
+set cursorline
+
+"highlight Normal guibg=grey90
+"highlight Cursor guibg=Green guifg=NONE
+"highlight lCursor guibg=Cyan guifg=NONE
+"highlight NonText guibg=grey80
+"highlight Constant gui=NONE guibg=grey95
+"highlight Special gui=NONE guibg=grey95
+"highlight CursorLine guibg=#ffffe0
+"highlight CursorColumn guibg=#ffffe0
+
 if has('unix')
     set guifont=Monaco:h12
     set shell=/bin/zsh
@@ -50,33 +68,9 @@ if has('unix')
     endif
 elseif has('win32')
     set guifont=consolas:h12:cRUSSIAN
-    "set guifont=Monaco:h10
-    "set guifont=Monofur:h14
     set shell=powershell
     set shellslash
-    colo vivdchalk
-endif
-
-" Only do this for Vim version 5.0 and later.
-if version >= 500
-  let c_comment_strings=1
-
-  if !exists("syntax_on")
-    syntax on
-  endif
-
-  set hlsearch
-
-  highlight Normal guibg=grey90
-  highlight Cursor guibg=Green guifg=NONE
-  highlight lCursor guibg=Cyan guifg=NONE
-  highlight NonText guibg=grey80
-  highlight Constant gui=NONE guibg=grey95
-  highlight Special gui=NONE guibg=grey95
-  highlight CursorLine guibg=#ffffe0
-  highlight CursorColumn guibg=#ffffe0
-  
-  set cursorline
+    colo zenburn
 endif
 
 filetype on
@@ -119,6 +113,7 @@ nnoremap <silent> <Leader>9 :call EncloseWord('(', ')')<CR>
 nnoremap <silent> <Leader>< :call EncloseWord('<', '>')<CR>
 nnoremap <silent> <Leader>{ :call EncloseWord('{', '}')<CR>
 nnoremap <silent> <Leader>[ :call EncloseWord('[', ']')<CR>
+nnoremap <silent> <Leader>" :call EncloseWord('"', '"')<CR>
 
 
 map <up> <nop>
