@@ -115,6 +115,8 @@ nnoremap <silent> <Leader>{ :call EncloseWord('{', '}')<CR>
 nnoremap <silent> <Leader>[ :call EncloseWord('[', ']')<CR>
 nnoremap <silent> <Leader>" :call EncloseWord('"', '"')<CR>
 
+nnoremap <silent> <Leader>h <C-W>K
+nnoremap <silent> <Leader>v <C-W>H
 
 map <up> <nop>
 map <down> <nop>
