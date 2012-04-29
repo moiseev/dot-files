@@ -1,0 +1,11 @@
+[ui]
+username = Maxim Moiseev <maxim.moiseev@gmail.com>
+
+[extensions]
+rebase =
+hgext.record =
+graphlog =
+
+[alias]
+l5 = glog -l5
+l10 = glog -l10
