@@ -71,7 +71,7 @@ syn keyword fsKeyword    do done downcast downto elif else end exception
 syn keyword fsKeyword    extern for fun function global if in inherit inline
 syn keyword fsKeyword    interface lazy let match member module mutable
 syn keyword fsKeyword    namespace new of override rec static struct then
-syn keyword fsKeyword    to type upcast val void when while with
+syn keyword fsKeyword    to type upcast val void when while with use
 
 syn keyword fsKeyword    async atomic break checked component const constraint
 syn keyword fsKeyword    constructor continue decimal eager event external

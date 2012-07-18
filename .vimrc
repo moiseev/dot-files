@@ -62,7 +62,7 @@ if has('unix')
 
     let s:uname = system("echo -n \"$(uname)\"")
     if !v:shell_error && s:uname == "Linux"
-        colo zenburn
+        colo vividchalk
     else
         colo vividchalk
     endif
