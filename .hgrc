@@ -7,5 +7,9 @@ hgext.record =
 graphlog =
 
 [alias]
+cim = ci -m
+ciam = ci -Am
 l5 = glog -l5
 l10 = glog -l10
+pullr = pull --rebase
+pullu = pull -u
