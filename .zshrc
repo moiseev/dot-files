@@ -34,7 +34,7 @@ plugins=(git, osx)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH="$HOME/Library/Haskell/bin:$PATH"
+export PATH="/usr/local/Cellar/erlang/R15B/bin:$HOME/Library/Haskell/bin:$PATH"
 
 export EDITOR=vim
 
