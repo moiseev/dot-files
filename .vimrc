@@ -10,6 +10,8 @@ endif
 "source $VIMRUNTIME/mswin.vim
 behave mswin
 
+call pathogen#infect()
+
 set nobackup
 set noswapfile
 set ignorecase
@@ -99,21 +101,6 @@ nnoremap <silent> <Leader>\ :s/\\/\\\\/g<CR>
 nmap <silent> <S-Tab> :bnext<CR>
 "nmap <C-F4> :bd<CR>
 nmap <silent> <Leader>w :bd<CR>
-
-" Encloses text under cursor/selection/whatever with specified brackets
-"   o -- open bracket
-"   c -- closing bracket
-"   delcmd -- command for the deletion
-fun! EncloseWord(o, c)
-    exe "normal mdlbdei" . a:o . "\<Esc>pa" . a:c . "\<Esc>`dl"
-endfun
-
-nnoremap <silent> <Leader>( :call EncloseWord('(', ')')<CR>
-nnoremap <silent> <Leader>9 :call EncloseWord('(', ')')<CR>
-nnoremap <silent> <Leader>< :call EncloseWord('<', '>')<CR>
-nnoremap <silent> <Leader>{ :call EncloseWord('{', '}')<CR>
-nnoremap <silent> <Leader>[ :call EncloseWord('[', ']')<CR>
-nnoremap <silent> <Leader>" :call EncloseWord('"', '"')<CR>
 
 nnoremap <silent> <Leader>h <C-W>K
 nnoremap <silent> <Leader>v <C-W>H
