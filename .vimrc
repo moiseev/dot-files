@@ -101,6 +101,7 @@ nnoremap <silent> <Leader>\ :s/\\/\\\\/g<CR>
 nmap <silent> <S-Tab> :bnext<CR>
 "nmap <C-F4> :bd<CR>
 nmap <silent> <Leader>w :bd<CR>
+nmap <silent> <Leader>w! :bd!<CR>
 
 nnoremap <silent> <Leader>h <C-W>K
 nnoremap <silent> <Leader>v <C-W>H
@@ -145,6 +146,8 @@ set laststatus=2
 "   %m modified flag [+] (modified), [-] (unmodifiable) or nothing
 "   %r readonly flag [RO]
 "   %y filetype [ruby]
+"   %{&enc} current encoding used
+"   %{&fenc} current file encoding
 "   %= split point for left and right justification
 "   %-35. width specification
 "   %l current line number
@@ -153,4 +156,4 @@ set laststatus=2
 "   %V current virtual column number (-n), if different from %c
 "   %P percentage through buffer
 "   %) end of width specification
-set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
+set statusline=%<\ %n:%f\ %m%r%y\ \[%{&enc}\]\ \[%{&fenc}\]%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
