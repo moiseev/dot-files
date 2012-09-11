@@ -1,3 +1,10 @@
 [user]
 	name = Maxim Moiseev
 	email = maxim.moiseev@gmail.com
+[alias]
+    ci = commit
+    cim = commit -m
+    st = status --short
+    glog = log --graph --oneline
+    l5 = log --graph --oneline -n5
+    l10 = log --graph --oneline -n10
