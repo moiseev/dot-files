@@ -5,6 +5,7 @@ username = Maxim Moiseev <maxim.moiseev@gmail.com>
 rebase =
 hgext.record =
 graphlog =
+mq =
 
 [alias]
 cim = ci -m
