@@ -103,8 +103,8 @@ nmap <silent> <S-Tab> :bnext<CR>
 nmap <silent> <Leader>w :bd<CR>
 nmap <silent> <Leader>w! :bd!<CR>
 
-nnoremap <silent> <Leader>h <C-W>K
-nnoremap <silent> <Leader>v <C-W>H
+nnoremap <silent> <Leader>- <C-W>K
+nnoremap <silent> <Leader>\ <C-W>H
 
 map <up> <nop>
 map <down> <nop>
@@ -121,6 +121,8 @@ map <C-l> <C-w>l
 
 
 nmap <silent> <ESC><ESC> :nohlsearch<CR>
+inoremap <silent> jk <ESC>
+inoremap <silent> `` <ESC>
 
 nmap <Leader>n :NERDTreeClose<CR>:NERDTreeToggle<CR>
 nmap <Leader>m :NERDTreeClose<CR>:NERDTreeFind<CR>
