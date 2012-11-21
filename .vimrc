@@ -121,8 +121,6 @@ map <C-l> <C-w>l
 
 
 nmap <silent> <ESC><ESC> :nohlsearch<CR>
-inoremap <silent> jk <ESC>
-inoremap <silent> `` <ESC>
 
 nmap <Leader>n :NERDTreeClose<CR>:NERDTreeToggle<CR>
 nmap <Leader>m :NERDTreeClose<CR>:NERDTreeFind<CR>
