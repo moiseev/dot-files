@@ -6,8 +6,6 @@ else
     language messages en
 endif
 
-"source $VIMRUNTIME/vimrc_example.vim
-"source $VIMRUNTIME/mswin.vim
 behave mswin
 
 call pathogen#infect()
@@ -157,3 +155,6 @@ set laststatus=2
 "   %P percentage through buffer
 "   %) end of width specification
 set statusline=%<\ %n:%f\ %m%r%y\ \[%{&enc}\]\ \[%{&fenc}\]%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
+
+let g:snips_author='Maxim Moiseev'
+let g:my_email_addr='<maxim.moiseev@gmail.com>'
