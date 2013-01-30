@@ -37,6 +37,8 @@ set history=1000         " remember more commands and search history
 set undolevels=1000      " use many muchos levels of undo
 set incsearch
 set bs=indent,eol,start
+set modeline
+set modelines=3
 
 let c_comment_strings=1
 
