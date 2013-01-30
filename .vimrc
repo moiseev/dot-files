@@ -120,9 +120,9 @@ map <C-l> <C-w>l
 
 nmap <silent> <ESC><ESC> :nohlsearch<CR>
 
-nmap <Leader>n :NERDTreeClose<CR>:NERDTreeToggle<CR>
-nmap <Leader>m :NERDTreeClose<CR>:NERDTreeFind<CR>
-nmap <Leader>N :NERDTreeClose<CR>
+nmap <silent> <Leader>n :NERDTreeToggle<CR>
+nmap <silent> <Leader>m :NERDTreeFind<CR>
+nmap <silent> <Leader>N :NERDTreeClose<CR>
 
 " NERDTree settings
 let NERDTreeIgnore=['\.pyc$', '\.pyo$', '\.obj$']
