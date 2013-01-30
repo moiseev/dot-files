@@ -124,6 +124,7 @@ nmap <Leader>n :NERDTreeClose<CR>:NERDTreeToggle<CR>
 nmap <Leader>m :NERDTreeClose<CR>:NERDTreeFind<CR>
 nmap <Leader>N :NERDTreeClose<CR>
 
+" NERDTree settings
 let NERDTreeIgnore=['\.pyc$', '\.pyo$', '\.obj$']
 let NERDTreeShowFiles=1
 let NERDTreeShowHidden=1
@@ -156,5 +157,23 @@ set laststatus=2
 "   %) end of width specification
 set statusline=%<\ %n:%f\ %m%r%y\ \[%{&enc}\]\ \[%{&fenc}\]%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
 
+set wildignore=*.o,*.exe,*.obj,*.pyc,*.pyd,*.hsi,*.beam,*.dll,*.class
+
+if has('win32')
+    let g:fsharp_interactive_bin = "C:\\Program Files\\Microsoft F#\\v4.0\\Fsi.exe"
+endif
+
+" SnipMate settings
 let g:snips_author='Maxim Moiseev'
 let g:my_email_addr='<maxim.moiseev@gmail.com>'
+
+" CtrlP settings
+" set the root folder to be topmost containing '.hg', '.git' etc.
+let g:ctrlp_working_path_mode = 'r'
+" ignore dot-folders
+let g:ctrlp_dotfiles = 0
+" ignoring some common non-editable files
+"let g:ctrlp_custom_ignore = ''
+
+" restore default session if it exists
+silent! source $VIM/Scratch.vim
