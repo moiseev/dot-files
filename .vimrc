@@ -157,7 +157,7 @@ set laststatus=2
 "   %) end of width specification
 set statusline=%<\ %n:%f\ %m%r%y\ \[%{&enc}\]\ \[%{&fenc}\]%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
 
-set wildignore=*.o,*.exe,*.obj,*.pyc,*.pyd,*.hsi,*.beam,*.dll,*.class
+set wildignore=*.o,*.exe,*.obj,*.pyc,*.pyd,*.hsi,*.beam,*.dll,*.class,.DS_Store
 
 if has('win32')
     let g:fsharp_interactive_bin = "C:\\Program Files\\Microsoft F#\\v4.0\\Fsi.exe"
