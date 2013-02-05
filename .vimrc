@@ -48,6 +48,8 @@ endif
 
 set hlsearch
 set cursorline
+set foldenable
+set foldmethod=manual
 
 "highlight Normal guibg=grey90
 "highlight Cursor guibg=Green guifg=NONE
@@ -121,6 +123,7 @@ map <C-l> <C-w>l
 
 
 nmap <silent> <ESC><ESC> :nohlsearch<CR>
+nnoremap <silent> <space> za
 
 nmap <silent> <Leader>n :NERDTreeToggle<CR>
 nmap <silent> <Leader>m :NERDTreeFind<CR>
