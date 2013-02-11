@@ -121,6 +121,9 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+" markdown style heading
+nmap <silent> hh yypVr=<CR>
+
 
 nmap <silent> <ESC><ESC> :nohlsearch<CR>
 nnoremap <silent> <space> za
