@@ -122,7 +122,7 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 " markdown style heading
-nmap <silent> hh yypVr=<CR>
+nmap <silent> <leader>h yypVr=<CR>
 
 
 nmap <silent> <ESC><ESC> :nohlsearch<CR>
