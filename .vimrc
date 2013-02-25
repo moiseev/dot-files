@@ -184,6 +184,7 @@ let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_dotfiles = 0
 " ignoring some common non-editable files
 "let g:ctrlp_custom_ignore = ''
+nnoremap <Leader>p :CtrlPBuffer<CR>
 
 " restore default session if it exists
 silent! source $VIM/Scratch.vim
