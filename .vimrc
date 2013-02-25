@@ -102,8 +102,10 @@ nnoremap <silent> <Leader>\ :s/\\/\\\\/g<CR>
 
 nmap <silent> <S-Tab> :bnext<CR>
 "nmap <C-F4> :bd<CR>
-nmap <silent> <Leader>w :bd<CR>
-nmap <silent> <Leader>w! :bd!<CR>
+nnoremap <silent> <Leader>ww :bd<CR>
+nnoremap <silent> <Leader>w! :bd!<CR>
+nnoremap <silent> <Leader>wq :bd!<CR>
+
 
 nnoremap <silent> <Leader>- <C-W>K
 nnoremap <silent> <Leader>\ <C-W>H
