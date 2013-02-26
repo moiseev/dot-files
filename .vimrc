@@ -60,6 +60,10 @@ set foldmethod=manual
 "highlight CursorLine guibg=#ffffe0
 "highlight CursorColumn guibg=#ffffe0
 
+if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
+    set t_Co=256
+endif
+
 if has('unix')
     set guifont=Monaco:h12
     set shell=/bin/zsh
