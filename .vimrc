@@ -106,8 +106,10 @@ nnoremap <silent> <Leader>\ :s/\\/\\\\/g<CR>
 
 nmap <silent> <S-Tab> :bnext<CR>
 "nmap <C-F4> :bd<CR>
-nmap <silent> <Leader>w :bd<CR>
-nmap <silent> <Leader>w! :bd!<CR>
+nnoremap <silent> <Leader>ww :bd<CR>
+nnoremap <silent> <Leader>w! :bd!<CR>
+nnoremap <silent> <Leader>wq :bd!<CR>
+
 
 nnoremap <silent> <Leader>- <C-W>K
 nnoremap <silent> <Leader>\ <C-W>H
@@ -186,6 +188,7 @@ let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_dotfiles = 0
 " ignoring some common non-editable files
 "let g:ctrlp_custom_ignore = ''
+nnoremap <Leader>p :CtrlPBuffer<CR>
 
 " restore default session if it exists
 silent! source $VIM/Scratch.vim
