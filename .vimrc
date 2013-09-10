@@ -185,10 +185,7 @@ let g:my_email_addr='<maxim.moiseev@gmail.com>'
 " set the root folder to be topmost containing '.hg', '.git' etc.
 let g:ctrlp_working_path_mode = 'r'
 " ignore dot-folders
-let g:ctrlp_dotfiles = 0
+let g:ctrlp_dotfiles = 1
 " ignoring some common non-editable files
 "let g:ctrlp_custom_ignore = ''
 nnoremap <Leader>p :CtrlPBuffer<CR>
-
-" restore default session if it exists
-silent! source $VIM/Scratch.vim
