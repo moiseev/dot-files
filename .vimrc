@@ -72,7 +72,11 @@ if has('unix')
     if !v:shell_error && s:uname == "Linux"
         colo vividchalk
     else
-        colo vividchalk
+        let g:solarized_termcolors=256
+        let g:solarized_contrast="high"
+        let g:solarized_visibility="high"
+        set bg=dark
+        colo solarized
     endif
 elseif has('win32')
     set guifont=consolas:h12:cRUSSIAN
