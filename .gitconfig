@@ -8,3 +8,5 @@
     glog = log --graph --oneline
     l5 = log --graph --oneline -n5
     l10 = log --graph --oneline -n10
+[push]
+	default = simple
