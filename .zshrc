@@ -40,5 +40,7 @@ export EDITOR=vim
 
 autoload -Uz promptinit
 
+alias g=git
+
 promptinit
 prompt adam2
