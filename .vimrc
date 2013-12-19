@@ -74,7 +74,7 @@ if has('unix')
     else
         let g:solarized_termcolors=256
         let g:solarized_contrast="high"
-        let g:solarized_visibility="high"
+        let g:solarized_visibility="normal"
         set bg=dark
         colo solarized
     endif
