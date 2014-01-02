@@ -4,6 +4,7 @@
 [alias]
     ci = commit
     cim = commit -m
+    co = checkout
     st = status --short
     glog = log --graph --oneline
     l5 = log --graph --oneline -n5
