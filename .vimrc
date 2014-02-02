@@ -74,7 +74,7 @@ if has('unix')
     else
         let g:solarized_termcolors=256
         let g:solarized_contrast="high"
-        let g:solarized_visibility="normal"
+        let g:solarized_visibility="high"
         set bg=dark
         colo solarized
     endif
@@ -109,6 +109,8 @@ nnoremap <silent> <Leader>rm :%s/\r//g<CR>:g/^$/d<CR>
 nnoremap <silent> <Leader>\ :s/\\/\\\\/g<CR>
 
 nmap <silent> <S-Tab> :bnext<CR>
+nmap <silent> <C-j> :bnext<CR>
+nmap <silent> <C-k> :bprevious<CR>
 "nmap <C-F4> :bd<CR>
 nnoremap <silent> <Leader>ww :bd<CR>
 nnoremap <silent> <Leader>w! :bd!<CR>
@@ -126,10 +128,10 @@ map <right> <nop>
 nnoremap j gj
 nnoremap k gk
 
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
+"map <C-h> <C-w>h
+"map <C-j> <C-w>j
+"map <C-k> <C-w>k
+"map <C-l> <C-w>l
 
 " markdown style heading
 nmap <silent> <leader>h yypVr=<CR>
