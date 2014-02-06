@@ -11,3 +11,5 @@
     l10 = log --graph --oneline -n10
 [push]
 	default = simple
+[color]
+	ui = true
