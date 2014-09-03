@@ -1,0 +1,31 @@
+snippet pdef "private def"
+private def ${1}(${2}): ${3} = {
+  ${4}
+}
+endsnippet
+
+snippet pdef[ "private[] def"
+private[${1}] def ${2}(${3}): ${4} = {
+  ${5}
+}
+endsnippet
+
+snippet pval "private val"
+private val ${1}
+endsnippet
+
+snippet pval[ "private[] val"
+private[${1}] val ${2}
+endsnippet
+
+snippet fy "for comprehension"
+for {
+  ${1}
+} yield ${2}
+endsnippet
+
+snippet def "a simple def"
+def ${1}(${2}): ${3} = {
+  ${4}
+}
+endsnippet

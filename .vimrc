@@ -40,6 +40,8 @@ set bs=indent,eol,start
 set modeline
 set modelines=3
 
+set autoread " automatically reload files from disk when changed
+
 let c_comment_strings=1
 
 if !exists("syntax_on")
@@ -65,7 +67,8 @@ if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gno
 endif
 
 if has('unix')
-    set guifont=Monaco:h12
+    "set guifont=Monaco:h12
+    set guifont=Inconsolata:h15
     set shell=/bin/zsh
 
     let s:uname = system("echo -n \"$(uname)\"")
@@ -111,6 +114,7 @@ nnoremap <silent> <Leader>\ :s/\\/\\\\/g<CR>
 nmap <silent> <S-Tab> :bnext<CR>
 nmap <silent> <C-j> :bnext<CR>
 nmap <silent> <C-k> :bprevious<CR>
+nnoremap <silent> <C-h> :b#<CR>
 "nmap <C-F4> :bd<CR>
 nnoremap <silent> <Leader>ww :bd<CR>
 nnoremap <silent> <Leader>w! :bd!<CR>
@@ -145,7 +149,7 @@ nmap <silent> <Leader>m :NERDTreeFind<CR>
 nmap <silent> <Leader>N :NERDTreeClose<CR>
 
 " NERDTree settings
-let NERDTreeIgnore=['\.pyc$', '\.pyo$', '\.obj$']
+let NERDTreeIgnore=['\.pyc$', '\.pyo$', '\.obj$', '\.git$']
 let NERDTreeShowFiles=1
 let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen=0
@@ -195,3 +199,10 @@ let g:ctrlp_dotfiles = 1
 " ignoring some common non-editable files
 "let g:ctrlp_custom_ignore = ''
 nnoremap <Leader>p :CtrlPBuffer<CR>
+
+" Always enable rainbow parentheses
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+nnoremap <silent> <Leader>rp :RainbowParenthesesToggle<CR>
