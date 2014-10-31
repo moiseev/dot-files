@@ -145,6 +145,7 @@ nmap <silent> <ESC><ESC> :nohlsearch<CR>
 nnoremap <silent> <space> za
 
 nmap <silent> <Leader>n :NERDTreeToggle<CR>
+nmap <silent> <Leader>1 :NERDTreeToggle<CR>
 nmap <silent> <Leader>m :NERDTreeFind<CR>
 nmap <silent> <Leader>N :NERDTreeClose<CR>
 
