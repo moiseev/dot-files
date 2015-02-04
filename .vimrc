@@ -68,7 +68,7 @@ endif
 
 if has('unix')
     "set guifont=Monaco:h12
-    set guifont=Inconsolata:h15
+    set guifont=Menlo:h14
     set shell=/bin/zsh
 
     let s:uname = system("echo -n \"$(uname)\"")
@@ -124,10 +124,15 @@ nnoremap <silent> <Leader>wq :bd!<CR>
 nnoremap <silent> <Leader>- <C-W>K
 nnoremap <silent> <Leader>\ <C-W>H
 
+" HARDCORE!
 map <up> <nop>
 map <down> <nop>
 map <left> <nop>
 map <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
 
 nnoremap j gj
 nnoremap k gk

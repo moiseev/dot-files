@@ -35,11 +35,21 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH="/usr/local/Cellar/erlang/latest/bin:$HOME/Library/Haskell/bin:$PATH"
+export PATH="$PATH:/usr/local/sbin"
+# for fsharpc compiled programs
+export MONO_GAC_PREFIX="/usr/local"
 
+# Apple specific
+export PATH=/Users/moiseev/bin:/Users/moiseev/Work/Tools/scala/bin:/Users/moiseev/Work/Tools/protobuf/osx:/Users/moiseev/Work/Tools/sbt/bin:/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH
+export SCALA_HOME=/Users/moiseev/Work/Tools/scala
+alias updatefeeds="rsync -a --delete alewife@mattapan.apple.com:/Volumes/Data/gtfs_feeds/feeds/ ~/Work/feeds"
+# end of Apple specific section
+#
 export EDITOR=vim
 
 autoload -Uz promptinit
 
-alias g=git
+#alias g=git
+alias s=sbt
 
 promptinit
