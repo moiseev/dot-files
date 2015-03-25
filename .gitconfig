@@ -9,6 +9,10 @@
     glog = log --graph --oneline
     l5 = log --graph --oneline -n5
     l10 = log --graph --oneline -n10
+    d = diff --color
+    ds = diff --staged --color
+    dag = log --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative
+
 [push]
 	default = simple
 [color]
