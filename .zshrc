@@ -35,7 +35,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH="/usr/local/Cellar/erlang/latest/bin:$HOME/Library/Haskell/bin:$PATH"
-export PATH="$PATH:/usr/local/sbin"
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 # for fsharpc compiled programs
 export MONO_GAC_PREFIX="/usr/local"
 
