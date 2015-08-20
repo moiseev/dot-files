@@ -206,6 +206,8 @@ let g:ctrlp_dotfiles = 1
 "let g:ctrlp_custom_ignore = ''
 nnoremap <Leader>p :CtrlPBuffer<CR>
 
+let g:ctrl_match_func = { 'match' : 'matcher#cmatch' }
+
 " Always enable rainbow parentheses
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
