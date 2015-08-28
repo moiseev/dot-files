@@ -39,12 +39,10 @@ export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 # for fsharpc compiled programs
 export MONO_GAC_PREFIX="/usr/local"
 
-# Apple specific
-export PATH=/Users/moiseev/bin:/Users/moiseev/Work/Tools/scala/bin:/Users/moiseev/Work/Tools/protobuf/osx:/Users/moiseev/Work/Tools/sbt/bin:/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH
-export SCALA_HOME=/Users/moiseev/Work/Tools/scala
-alias updatefeeds="rsync -a --delete alewife@mattapan.apple.com:/Volumes/Data/gtfs_feeds/feeds/ ~/Work/feeds"
-# end of Apple specific section
-#
+export GOPATH=$HOME/Work/goplace
+export PATH=$GOPATH/bin:$HOME/bin:$HOME/Work/Tools/scala/bin:$HOME/Work/Tools/protobuf/osx:$HOME/Work/Tools/sbt/bin:/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH
+export SCALA_HOME=$HOME/Work/Tools/scala
+
 export EDITOR=vim
 
 autoload -Uz promptinit
