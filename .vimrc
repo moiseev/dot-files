@@ -79,7 +79,7 @@ if has('unix')
         let g:solarized_contrast="high"
         let g:solarized_visibility="high"
         set bg=dark
-        colo solarized
+        colo molokai
     endif
 elseif has('win32')
     set guifont=consolas:h12:cRUSSIAN

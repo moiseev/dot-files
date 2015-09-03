@@ -1,3 +1,3 @@
 augroup filetype
-    au! BufRead,BufNewFile *.proto set filetype=proto
-augroup end    
+    au! BufRead,BufNewFile *.thrift set filetype=thrift
+augroup end
