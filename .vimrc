@@ -193,9 +193,9 @@ if has('win32')
     let g:fsharp_interactive_bin = "C:\\Program Files\\Microsoft F#\\v4.0\\Fsi.exe"
 endif
 
-" SnipMate settings
-let g:snips_author='Maxim Moiseev'
-let g:my_email_addr='<maxim.moiseev@gmail.com>'
+" UltiSnips
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
+
 
 " CtrlP settings
 " set the root folder to be topmost containing '.hg', '.git' etc.
