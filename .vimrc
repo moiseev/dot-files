@@ -210,8 +210,12 @@ nnoremap <Leader>p :CtrlPBuffer<CR>
 let g:ctrl_match_func = { 'match' : 'matcher#cmatch' }
 
 " Always enable rainbow parentheses
-au VimEnter * RainbowParenthesesToggle
+au VimEnter * RainbowParenthesesActivate
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 nnoremap <silent> <Leader>rp :RainbowParenthesesToggle<CR>
+
+if executable('ag')
+    let g:ackprg = 'ag --vimgrep'
+endif
