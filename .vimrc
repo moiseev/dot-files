@@ -52,6 +52,7 @@ set hlsearch
 set cursorline
 set foldenable
 set foldmethod=manual
+set number
 
 "highlight Normal guibg=grey90
 "highlight Cursor guibg=Green guifg=NONE
