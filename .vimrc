@@ -53,6 +53,7 @@ set cursorline
 set foldenable
 set foldmethod=manual
 set number
+set sessionoptions-=options " to not store runtimepath in sessions (breaks pathogen)
 
 "highlight Normal guibg=grey90
 "highlight Cursor guibg=Green guifg=NONE
@@ -121,9 +122,14 @@ nnoremap <silent> <Leader>ww :bd<CR>
 nnoremap <silent> <Leader>w! :bd!<CR>
 nnoremap <silent> <Leader>wq :bd!<CR>
 
-
 nnoremap <silent> <Leader>- <C-W>K
 nnoremap <silent> <Leader>\ <C-W>H
+
+" QuickFix navigation
+nnoremap <silent> <Leader>cn :cn<CR>
+nnoremap <silent> <Leader>cp :cp<CR>
+nnoremap <silent> <Leader>cN :cnf<CR>
+nnoremap <silent> <Leader>cP :cpf<CR>
 
 " HARDCORE!
 map <up> <nop>
