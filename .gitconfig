@@ -2,16 +2,17 @@
 	name = Maxim Moiseev
 	email = maxim.moiseev@gmail.com
 [alias]
-    ci = commit
-    cim = commit -m
-    co = checkout
-    st = status --short
-    glog = log --graph --oneline
-    l5 = log --graph --oneline -n5
-    l10 = log --graph --oneline -n10
-    d = diff --color
-    ds = diff --staged --color
-    dag = log --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative
+  ci = commit
+  cim = commit -m
+  cp = cherry-pick
+  co = checkout
+  st = status --short
+  glog = log --graph --oneline
+  l5 = log --graph --oneline -n5
+  l10 = log --graph --oneline -n10
+  d = diff --color
+  ds = diff --staged --color
+  dag = log --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative
 
 [push]
 	default = simple
