@@ -6,6 +6,8 @@ rebase =
 hgext.record =
 graphlog =
 mq =
+color =
+pager =
 
 [alias]
 cim = ci -m
@@ -14,3 +16,6 @@ l5 = glog -l5
 l10 = glog -l10
 pullr = pull --rebase
 pullu = pull -u
+
+[pager]
+pager = LESS='FRX' less
