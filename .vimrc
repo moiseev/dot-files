@@ -33,6 +33,9 @@ set mouse=n     " mouse positioning is only allowed in normal mode
 set guioptions-=T
 set guioptions-=m	
 
+" Format comments.
+set formatoptions+=crq
+
 set history=1000         " remember more commands and search history
 set undolevels=1000      " use many muchos levels of undo
 set incsearch
@@ -80,8 +83,8 @@ if has('unix')
         let g:solarized_termcolors=256
         let g:solarized_contrast="high"
         let g:solarized_visibility="high"
-        set bg=dark
-        colo molokai
+        set bg=light
+        colo solarized
     endif
 elseif has('win32')
     set guifont=consolas:h12:cRUSSIAN
@@ -161,12 +164,28 @@ nmap <silent> <Leader>1 :NERDTreeToggle<CR>
 nmap <silent> <Leader>m :NERDTreeFind<CR>
 nmap <silent> <Leader>N :NERDTreeClose<CR>
 
+nnoremap Q <nop>
+nnoremap q: <nop>
+nnoremap q? <nop>
+nnoremap q/ <nop>
+
+" Persistent undo
+set undofile
+set undodir=$HOME/.vimundo  " Where to save undo histories
+set ur=100000
+
 " NERDTree settings
 let NERDTreeIgnore=['\.pyc$', '\.pyo$', '\.obj$', '\.git$']
 let NERDTreeShowFiles=1
 let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen=0
 let NERDTreeHighlightCursorLine=1
+
+" Map <C-A> to go to the beginning of the line, and <C-E> to go to the end of
+" the line.
+cnoremap <C-A> <C-B>
+inoremap <C-A> <Esc>I
+inoremap <C-E> <Esc>A
 
 " Make shift-insert work like in Xterm
 map <S-Insert> <MiddleMouse>
@@ -224,4 +243,11 @@ nnoremap <silent> <Leader>rp :RainbowParenthesesToggle<CR>
 
 if executable('ag')
     let g:ackprg = 'ag --vimgrep'
+endif
+
+if exists('g:NERDDelimiterMap') 
+    call extend(g:NERDDelimiterMap, {
+            \ 'swift':    {'left': '//', 'leftAlt': '/*', 'rightAlt': '*/'},
+            \ 'swiftgyb': {'left': '//', 'leftAlt': '/*', 'rightAlt': '*/'}
+            \ })
 endif
