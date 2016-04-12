@@ -42,8 +42,10 @@ export MONO_GAC_PREFIX="/usr/local"
 export GOPATH=$HOME/Work/goplace
 export PATH=$GOPATH/bin:$HOME/bin:$HOME/Work/Tools/scala/bin:$HOME/Work/Tools/protobuf/osx:$HOME/Work/Tools/sbt/bin:/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH
 export SCALA_HOME=$HOME/Work/Tools/scala
+export NNTPSERVER=gmane.org
 
 export EDITOR=vim
+NNTPSERVER=snews://news.gmane.org
 
 autoload -Uz promptinit
 
