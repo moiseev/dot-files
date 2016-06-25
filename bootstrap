@@ -16,7 +16,7 @@ main = do
 
     sh $ do
         file <- fmap filename $ ls "./"
-        guard (file /= ".DS_Store" && file /= "bootstrap" && file /= ".git")
+        guard (file /= ".DS_Store" && file /= "bootstrap" && file /= ".git" && file /= ".gitmodules")
         liftIO $ link opts file
 
     where
