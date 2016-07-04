@@ -51,5 +51,6 @@ autoload -Uz promptinit
 
 #alias g=git
 alias s=sbt
+alias r3=rebar3
 
 promptinit
