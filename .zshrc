@@ -34,14 +34,13 @@ plugins=(git osx brew cabal)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH="/usr/local/Cellar/erlang/latest/bin:$HOME/Library/Haskell/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/Library/Haskell/bin:$PATH"
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 # for fsharpc compiled programs
 export MONO_GAC_PREFIX="/usr/local"
 
 export GOPATH=$HOME/Work/goplace
-export PATH=$GOPATH/bin:$HOME/bin:$HOME/Work/Tools/scala/bin:$HOME/Work/Tools/protobuf/osx:$HOME/Work/Tools/sbt/bin:/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH
-export SCALA_HOME=$HOME/Work/Tools/scala
+export PATH=$GOPATH/bin:$HOME/bin:$PATH
 export NNTPSERVER=gmane.org
 
 export EDITOR=vim
@@ -50,7 +49,6 @@ NNTPSERVER=snews://news.gmane.org
 autoload -Uz promptinit
 
 #alias g=git
-alias s=sbt
 alias r3=rebar3
 
 promptinit
