@@ -49,3 +49,6 @@
 [submodule ".vim/bundle/nerdtree"]
 	path = .vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule ".vim/bundle/vim-erlang-runtime"]
+	path = .vim/bundle/vim-erlang-runtime
+	url = https://github.com/vim-erlang/vim-erlang-runtime.git
