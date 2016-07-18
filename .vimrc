@@ -230,6 +230,8 @@ let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_dotfiles = 1
 " ignoring some common non-editable files
 "let g:ctrlp_custom_ignore = ''
+" display more results
+let g:ctrlp_match_window = 'max:30'
 nnoremap <Leader>p :CtrlPBuffer<CR>
 
 let g:ctrl_match_func = { 'match' : 'matcher#cmatch' }
