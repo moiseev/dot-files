@@ -100,8 +100,7 @@ filetype indent on
 let g:tex_flavor='latex'
 
 let mapleader=","
-nnoremap <Leader>fs :silent !start fsi<CR>
-nnoremap <Leader>gh :silent !start ghci<CR>
+let g:mapleader=","
 
 nmap <silent> <Leader>ev :e $MYVIMRC<CR>
 nmap <silent> <Leader>sv :so $MYVIMRC<CR> 
@@ -227,11 +226,26 @@ let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
 " set the root folder to be topmost containing '.hg', '.git' etc.
 let g:ctrlp_working_path_mode = 'r'
 " ignore dot-folders
-let g:ctrlp_dotfiles = 1
+let g:ctrlp_show_hidden = 0
 " ignoring some common non-editable files
 "let g:ctrlp_custom_ignore = ''
 " display more results
 let g:ctrlp_match_window = 'max:30'
+let g:ctrlp_max_files=0
+let g:ctrlp_custom_ignore = {
+    \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+    \ 'file': '\v\.(exe|so|dll)$',
+    \ }
+
+let g:ctrlp_user_command = {
+    \ 'types': {
+        \ 1: ['.git', 'cd %s && git ls-files'],
+        \ 2: ['.hg', 'hg --cwd %s locate -I .'],
+    \ },
+    \ 'fallback': 'find %s -type f'
+    \ }
+
+
 nnoremap <Leader>p :CtrlPBuffer<CR>
 
 let g:ctrl_match_func = { 'match' : 'matcher#cmatch' }
@@ -247,9 +261,27 @@ if executable('ag')
     let g:ackprg = 'ag --vimgrep'
 endif
 
+cnoreabbrev Ack Ack!
+cnoreabbrev AckFromSearch AckFromSearch!
+nnoremap <leader>a :Ack!<space>
+nnoremap <leader>af :AckFromSearch!<cr>
+
 if exists('g:NERDDelimiterMap') 
     call extend(g:NERDDelimiterMap, {
             \ 'swift':    {'left': '//', 'leftAlt': '/*', 'rightAlt': '*/'},
             \ 'swiftgyb': {'left': '//', 'leftAlt': '/*', 'rightAlt': '*/'}
             \ })
+endif
+
+" UI
+set wildmenu
+set wildmode=longest:full,full
+set wildignore+=*.so,*.zip,*.o,*.a
+set wildignore+=.git\*,.hg\*,.svn\*
+
+
+" include any local configuration
+let local_config = expand('~/.vim_local')
+if filereadable(local_config)
+    execute 'source'.fnameescape(local_config)
 endif

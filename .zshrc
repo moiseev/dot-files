@@ -44,7 +44,12 @@ export PATH=$GOPATH/bin:$HOME/bin:$PATH
 export NNTPSERVER=gmane.org
 
 export EDITOR=vim
+export VISUAL=vim
 NNTPSERVER=snews://news.gmane.org
+
+if [ "$TERM" \=\= "xterm" ]; then
+    export TERM=xterm-256color
+fi
 
 autoload -Uz promptinit
 
