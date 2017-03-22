@@ -17,7 +17,6 @@ set scroll=1
 set shiftwidth=4
 set tabstop=4
 set expandtab
-set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=-1
 set iskeyword=@,48-57,_,192,255
