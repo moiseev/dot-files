@@ -57,3 +57,5 @@ autoload -Uz promptinit
 alias r3=rebar3
 
 promptinit
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
