@@ -119,9 +119,9 @@ nmap <silent> <C-j> :bnext<CR>
 nmap <silent> <C-k> :bprevious<CR>
 nnoremap <silent> <C-h> :b#<CR>
 "nmap <C-F4> :bd<CR>
-nnoremap <silent> <Leader>ww :bd<CR>
-nnoremap <silent> <Leader>w! :bd!<CR>
-nnoremap <silent> <Leader>wq :bd!<CR>
+nnoremap <silent> <Leader>ww :BD<CR>
+nnoremap <silent> <Leader>w! :BD!<CR>
+nnoremap <silent> <Leader>wq :BD!<CR>
 
 nnoremap <silent> <Leader>- <C-W>K
 nnoremap <silent> <Leader>\ <C-W>H

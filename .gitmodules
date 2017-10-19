@@ -52,3 +52,6 @@
 [submodule ".vim/bundle/fzf.vim"]
 	path = .vim/bundle/fzf.vim
 	url = git@github.com:junegunn/fzf.vim.git
+[submodule ".vim/bundle/vim-buffkill"]
+	path = .vim/bundle/vim-buffkill
+	url = https://github.com/qpkorr/vim-bufkill
