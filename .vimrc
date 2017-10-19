@@ -290,3 +290,8 @@ let local_config = expand('~/.vim_local')
 if filereadable(local_config)
     execute 'source'.fnameescape(local_config)
 endif
+
+" tmux repeat last action
+if executable('tmux')
+    nnoremap <silent> \r :!tmux send-keys C-p C-j <CR><CR>
+endif
