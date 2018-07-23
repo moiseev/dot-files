@@ -246,7 +246,7 @@ let g:ctrlp_user_command = {
 
 nnoremap <Leader>p :CtrlPBuffer<CR>
 " disable CtrlP in favor of fzf
-" let g:loaded_ctrlp = 1
+ let g:loaded_ctrlp = 1
 
 let g:ctrl_match_func = { 'match' : 'matcher#cmatch' }
 
@@ -280,9 +280,9 @@ set wildignore+=*.so,*.zip,*.o,*.a
 set wildignore+=.git\*,.hg\*,.svn\*
 
 " fzf
-"set rtp+=/usr/local/opt/fzf
-"nnoremap <Leader>p :Buffers<CR>
-"nnoremap <C-p> :Files<CR>
+set rtp+=/usr/local/opt/fzf
+nnoremap <Leader>p :Buffers<CR>
+nnoremap <C-p> :Files<CR>
 
 
 " include any local configuration
