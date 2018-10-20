@@ -11,6 +11,9 @@ import Data.Monoid
 import Control.Monad.IO.Class
 
 :set prompt "λ: "
+:set +t
+:set +s
+:seti -XOverloadedStrings
 
 :set -fno-warn-unused-imports
 :def hlint const . return $ ":! hlint \"src\""
