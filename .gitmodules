@@ -55,3 +55,6 @@
 [submodule ".vim/bundle/vim-buffkill"]
 	path = .vim/bundle/vim-buffkill
 	url = https://github.com/qpkorr/vim-bufkill
+[submodule ".vim/bundle/vim-hindent"]
+	path = .vim/bundle/vim-hindent
+	url = git@github.com:alx741/vim-hindent.git
