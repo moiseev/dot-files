@@ -56,6 +56,8 @@ autoload -Uz promptinit
 #alias g=git
 alias r3=rebar3
 
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
 promptinit
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
