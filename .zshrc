@@ -36,16 +36,11 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH="$HOME/.local/bin:$HOME/Library/Haskell/bin:$PATH"
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-# for fsharpc compiled programs
-export MONO_GAC_PREFIX="/usr/local"
 
-export GOPATH=$HOME/Work/goplace
-export PATH=$GOPATH/bin:$HOME/bin:$PATH
-export NNTPSERVER=gmane.org
+export PATH=$HOME/bin:$PATH
 
 export EDITOR=vim
 export VISUAL=vim
-NNTPSERVER=snews://news.gmane.org
 
 if [ "$TERM" \=\= "xterm" ]; then
     export TERM=xterm-256color
@@ -54,7 +49,8 @@ fi
 autoload -Uz promptinit
 
 #alias g=git
-alias r3=rebar3
+alias r=rebar3
+
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
