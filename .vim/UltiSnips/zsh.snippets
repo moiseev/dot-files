@@ -1,13 +1,12 @@
+priority -50
+
 extends sh
 
-snippet #! "shebang" !
-#!/bin/zsh
+priority -49
 
-endsnippet
-
-snippet !env "#!/usr/bin/env (!env)" !
+snippet #! "#!/usr/bin/env zsh" b
 #!/usr/bin/env zsh
-
+$0
 endsnippet
 
 # vim:ft=snippets:
