@@ -29,7 +29,7 @@ ZSH_THEME="bureau"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx brew cabal)
+plugins=(git osx brew vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -57,4 +57,6 @@ alias r=rebar3
 promptinit
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[ -f ~/.bash_profile ] && source ~/.bash_profile
+#[ -f ~/.bash_profile ] && source ~/.bash_profile
+
+RPS1+='$(vi_mode_prompt_info)'
