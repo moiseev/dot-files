@@ -293,5 +293,5 @@ endif
 
 " tmux repeat last action
 if executable('tmux')
-    nnoremap <silent> \r :!tmux send-keys C-p C-j <CR><CR>
+    nnoremap <silent> \r :!tmux send-keys -t {right-of} C-p C-j <CR><CR>
 endif
