@@ -46,3 +46,6 @@
 [submodule ".vim/bundle/vim-hindent"]
 	path = .vim/bundle/vim-hindent
 	url = https://github.com/alx741/vim-hindent.git
+[submodule ".vim/bundle/vim-elixir"]
+	path = .vim/bundle/vim-elixir
+	url = https://github.com/elixir-editors/vim-elixir.git

@@ -35,7 +35,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH="$HOME/.local/bin:$HOME/Library/Haskell/bin:$PATH"
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 
 export PATH=$HOME/bin:$PATH
 
@@ -49,8 +49,6 @@ fi
 autoload -Uz promptinit
 
 #alias g=git
-alias r=rebar3
-
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
