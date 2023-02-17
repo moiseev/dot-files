@@ -1,51 +1,39 @@
-[submodule "oh-my-zsh"]
-	path = .oh-my-zsh
-	url = https://github.com/robbyrussell/oh-my-zsh.git
 [submodule ".vim/bundle/surround"]
-	path = .vim/bundle/surround
+	path = .vim/pack/moiseev/start/surround
 	url = https://github.com/tpope/vim-surround.git
 [submodule ".vim/bundle/nerdcommenter"]
-	path = .vim/bundle/nerdcommenter
+	path = .vim/pack/moiseev/start/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
-[submodule ".vim/bundle/ctrlp"]
-	path = .vim/bundle/ctrlp
-	url = https://github.com/kien/ctrlp.vim.git
 [submodule ".vim/bundle/rainbow"]
     path = .vim/bundle/rainbow
     url = https://github.com/oblitum/rainbow.git
 [submodule ".vim/bundle/rainbow_parentheses"]
-	path = .vim/bundle/rainbow_parentheses
+	path = .vim/pack/moiseev/start/rainbow_parentheses
 	url = https://github.com/kien/rainbow_parentheses.vim.git
 [submodule ".tmux/plugins/tpm"]
 	path = .tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
-[submodule ".vim/bundle/ctrlp-cmatcher"]
-	path = .vim/bundle/ctrlp-cmatcher
-	url = https://thub.com/JazzCore/ctrlp-cmatcher.git
-[submodule ".vim/bundle/ultisnips"]
-	path = .vim/bundle/ultisnips
-	url = https://github.com/SirVer/ultisnips.git
-[submodule ".vim/bundle/tabular"]
-	path = .vim/bundle/tabular
-	url = https://github.com/godlygeek/tabular.git
 [submodule ".vim/bundle/ack.vim"]
-	path = .vim/bundle/ack.vim
+	path = .vim/pack/moiseev/start/ack.vim
 	url = https://github.com/mileszs/ack.vim.git
 [submodule ".vim/bundle/nerdtree"]
-	path = .vim/bundle/nerdtree
+	path = .vim/pack/moiseev/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
 [submodule ".vim/bundle/vim-erlang-runtime"]
 	path = .vim/bundle/vim-erlang-runtime
 	url = https://github.com/vim-erlang/vim-erlang-runtime.git
 [submodule ".vim/bundle/fzf.vim"]
-	path = .vim/bundle/fzf.vim
+	path = .vim/pack/moiseev/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim.git
 [submodule ".vim/bundle/vim-buffkill"]
-	path = .vim/bundle/vim-buffkill
+	path = .vim/pack/moiseev/start/vim-bufkill
 	url = https://github.com/qpkorr/vim-bufkill
 [submodule ".vim/bundle/vim-hindent"]
-	path = .vim/bundle/vim-hindent
+	path = .vim/pack/moiseev/start/vim-hindent
 	url = https://github.com/alx741/vim-hindent.git
 [submodule ".vim/bundle/vim-elixir"]
-	path = .vim/bundle/vim-elixir
+	path = .vim/pack/moiseev/start/vim-elixir
 	url = https://github.com/elixir-editors/vim-elixir.git
+[submodule ".vim/pack/moiseev/start/vim-erlang-runtime"]
+	path = .vim/pack/moiseev/start/vim-erlang-runtime
+	url = https://github.com/vim-erlang/vim-erlang-runtime.git

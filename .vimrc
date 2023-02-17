@@ -1,14 +1,8 @@
 set nocompatible
 
-if has('unix')
-    language messages C
-else
-    language messages en
-endif
+language messages C
 
 behave mswin
-
-call pathogen#infect()
 
 set nobackup
 set noswapfile
@@ -55,38 +49,14 @@ set cursorline
 set foldenable
 set foldmethod=manual
 set number
-set sessionoptions-=options " to not store runtimepath in sessions (breaks pathogen)
-
-"highlight Normal guibg=grey90
-"highlight Cursor guibg=Green guifg=NONE
-"highlight lCursor guibg=Cyan guifg=NONE
-"highlight NonText guibg=grey80
-"highlight Constant gui=NONE guibg=grey95
-"highlight Special gui=NONE guibg=grey95
-"highlight CursorLine guibg=#ffffe0
-"highlight CursorColumn guibg=#ffffe0
 
 if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
     set t_Co=256
 endif
 
-if has('unix')
-    "set guifont=Monaco:h12
-    set guifont=Menlo:h14
-    set shell=/bin/zsh
-
-    let s:uname = system("echo -n \"$(uname)\"")
-    if !v:shell_error && s:uname == "Linux"
-        colo vividchalk
-    else
-        colo molokai
-    endif
-elseif has('win32')
-    set guifont=consolas:h12:cRUSSIAN
-    set shell=powershell
-    set shellslash
-    colo zenburn
-endif
+set guifont="JetBrains Mono":h13
+set shell=fish
+colo molokai
 
 filetype on
 filetype plugin on
@@ -145,9 +115,6 @@ nnoremap k gk
 "map <C-j> <C-w>j
 "map <C-k> <C-w>k
 "map <C-l> <C-w>l
-
-" markdown style heading
-nmap <silent> <leader>h yypVr=<CR>
 
 
 nmap <silent> <ESC><ESC> :nohlsearch<CR>
@@ -209,42 +176,6 @@ set statusline=%<\ %n:%f\ %m%r%y\ \[%{&enc}\]\ \[%{&fenc}\]%=%-35.(line:\ %l\ of
 
 set wildignore=*.o,*.exe,*.obj,*.pyc,*.pyd,*.hsi,*.beam,*.dll,*.class,.DS_Store
 
-if has('win32')
-    let g:fsharp_interactive_bin = "C:\\Program Files\\Microsoft F#\\v4.0\\Fsi.exe"
-endif
-
-" UltiSnips
-let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
-
-
-" CtrlP settings
-" set the root folder to be topmost containing '.hg', '.git' etc.
-let g:ctrlp_working_path_mode = 'r'
-" ignore dot-folders
-let g:ctrlp_show_hidden = 0
-" ignoring some common non-editable files
-"let g:ctrlp_custom_ignore = ''
-" display more results
-let g:ctrlp_match_window = 'max:30'
-let g:ctrlp_max_files=0
-let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-    \ 'file': '\v\.(exe|so|dll)$',
-    \ }
-
-let g:ctrlp_user_command = {
-    \ 'types': {
-        \ 1: ['.git', 'cd %s && git ls-files'],
-        \ 2: ['.hg', 'hg --cwd %s locate -I .'],
-    \ },
-    \ 'fallback': 'find %s -type f'
-    \ }
-
-nnoremap <Leader>p :CtrlPBuffer<CR>
-" disable CtrlP in favor of fzf
- let g:loaded_ctrlp = 1
-
-let g:ctrl_match_func = { 'match' : 'matcher#cmatch' }
 
 " Always enable rainbow parentheses
 au VimEnter * RainbowParenthesesActivate
@@ -276,7 +207,7 @@ set wildignore+=*.so,*.zip,*.o,*.a
 set wildignore+=.git\*,.hg\*,.svn\*
 
 " fzf
-set rtp+=/usr/local/opt/fzf
+set rtp+=/opt/homebrew/opt/fzf
 nnoremap <Leader>p :Buffers<CR>
 nnoremap <C-p> :Files<CR>
 
