@@ -37,3 +37,6 @@
 [submodule ".vim/pack/moiseev/start/vim-erlang-runtime"]
 	path = .vim/pack/moiseev/start/vim-erlang-runtime
 	url = https://github.com/vim-erlang/vim-erlang-runtime.git
+[submodule ".vim/pack/moiseev/start/rust.vim"]
+	path = .vim/pack/moiseev/start/rust.vim
+	url = https://github.com/rust-lang/rust.vim.git
