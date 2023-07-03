@@ -136,7 +136,7 @@ set undodir=$HOME/.vimundo  " Where to save undo histories
 set ur=100000
 
 " NERDTree settings
-let NERDTreeIgnore=['\.pyc$', '\.pyo$', '\.obj$', '\.git$']
+let NERDTreeIgnore=['\.pyc$', '\.pyo$', '\.obj$', '\.git$', '.DS_Store$']
 let NERDTreeShowFiles=1
 let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen=0
