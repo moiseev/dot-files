@@ -189,9 +189,11 @@ if executable('ag')
 endif
 
 cnoreabbrev Ack Ack!
-cnoreabbrev AckFromSearch AckFromSearch!
+cnoreabbrev ack Ack!
+"cnoreabbrev AckFromSearch AckFromSearch!
 nnoremap <leader>a :Ack!<space>
-nnoremap <leader>af :AckFromSearch!<cr>
+nnoremap <leader>* :Ack!<cr>
+"nnoremap <leader>af :AckFromSearch!<cr>
 
 if exists('g:NERDDelimiterMap') 
     call extend(g:NERDDelimiterMap, {
