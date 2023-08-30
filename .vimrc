@@ -7,7 +7,6 @@ behave mswin
 set nobackup
 set noswapfile
 set ignorecase
-set scroll=1
 set shiftwidth=4
 set tabstop=4
 set expandtab
@@ -56,7 +55,7 @@ endif
 
 set guifont="JetBrains Mono":h13
 set shell=fish
-colo molokai
+colo solarized8
 
 filetype on
 filetype plugin on
@@ -97,6 +96,7 @@ nnoremap <silent> <Leader>cn :cn<CR>
 nnoremap <silent> <Leader>cp :cp<CR>
 nnoremap <silent> <Leader>cN :cnf<CR>
 nnoremap <silent> <Leader>cP :cpf<CR>
+nnoremap <silent> <Leader>cc :cc<CR>
 
 " HARDCORE!
 "map <up> <nop>
@@ -212,6 +212,10 @@ set wildignore+=.git\*,.hg\*,.svn\*
 set rtp+=/opt/homebrew/opt/fzf
 nnoremap <Leader>p :Buffers<CR>
 nnoremap <C-p> :Files<CR>
+
+" YankRing
+let g:yankring_replace_n_pkey = '<M-P>'
+let g:yankring_replace_n_nkey = '<C-N>'
 
 
 " include any local configuration
