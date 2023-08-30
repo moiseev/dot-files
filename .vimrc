@@ -69,8 +69,6 @@ let g:mapleader=","
 nmap <silent> <Leader>ev :e $MYVIMRC<CR>
 nmap <silent> <Leader>sv :so $MYVIMRC<CR> 
 
-nnoremap <CR> o<ESC>
-nnoremap <S-CR> O<ESC>j
 nnoremap <silent> <TAB><TAB> :set invwrap<CR>
 
 nnoremap ; :
@@ -190,6 +188,7 @@ endif
 
 cnoreabbrev Ack Ack!
 cnoreabbrev ack Ack!
+cnoreabbrev ag Ack!
 "cnoreabbrev AckFromSearch AckFromSearch!
 nnoremap <leader>a :Ack!<space>
 nnoremap <leader>* :Ack!<cr>
@@ -210,13 +209,8 @@ set wildignore+=.git\*,.hg\*,.svn\*
 
 " fzf
 set rtp+=/opt/homebrew/opt/fzf
-nnoremap <Leader>p :Buffers<CR>
-nnoremap <C-p> :Files<CR>
-
-" YankRing
-let g:yankring_replace_n_pkey = '<M-P>'
-let g:yankring_replace_n_nkey = '<C-N>'
-
+nnoremap <Leader>p :Files<CR>
+nnoremap <leader>g :GFiles<CR>
 
 " include any local configuration
 let local_config = expand('~/.vim_local')
