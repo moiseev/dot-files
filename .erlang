@@ -1,0 +1,2 @@
+code:load_abs(filename:join(os:getenv("HOME"), ".erlang.d/user_default")).
+% vim: ft=erlang

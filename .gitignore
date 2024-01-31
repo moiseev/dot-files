@@ -5,3 +5,4 @@
 tags
 .tmux/plugins/tmux-*
 .tmux/resurrect
+*.beam
