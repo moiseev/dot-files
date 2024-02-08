@@ -222,3 +222,7 @@ endif
 if executable('tmux')
     nnoremap <silent> \r :!tmux send-keys -t {right-of} C-p C-j <CR><CR>
 endif
+
+let g:lightline = {
+            \ 'colorscheme': 'solarized',
+        \ }
