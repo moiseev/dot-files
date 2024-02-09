@@ -78,10 +78,7 @@ nnoremap <silent> <Leader>rm :%s/\r//g<CR>:g/^$/d<CR>
 nnoremap <silent> <Leader>\ :s/\\/\\\\/g<CR>
 
 nmap <silent> <S-Tab> :bnext<CR>
-nmap <silent> <C-j> :bnext<CR>
-nmap <silent> <C-k> :bprevious<CR>
 nnoremap <silent> <C-h> :b#<CR>
-"nmap <C-F4> :bd<CR>
 nnoremap <silent> <Leader>ww :BD<CR>
 nnoremap <silent> <Leader>w! :BD!<CR>
 nnoremap <silent> <Leader>wq :BD!<CR>
@@ -94,7 +91,6 @@ nnoremap <silent> <Leader>cn :cn<CR>
 nnoremap <silent> <Leader>cp :cp<CR>
 nnoremap <silent> <Leader>cN :cnf<CR>
 nnoremap <silent> <Leader>cP :cpf<CR>
-nnoremap <silent> <Leader>cc :cc<CR>
 
 " HARDCORE!
 "map <up> <nop>
@@ -177,6 +173,7 @@ set wildignore=*.o,*.exe,*.obj,*.pyc,*.pyd,*.hsi,*.beam,*.dll,*.class,.DS_Store
 
 " Always enable rainbow parentheses
 au VimEnter * RainbowParenthesesActivate
+au ColorScheme * RainbowParenthesesActivate
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
@@ -220,9 +217,15 @@ endif
 
 " tmux repeat last action
 if executable('tmux')
-    nnoremap <silent> \r :!tmux send-keys -t {right-of} C-p C-j <CR><CR>
+    nnoremap <silent> \r :echo "Gotta use the leader!<CR>
+    nnoremap <silent> <Leader>r :!tmux send-keys -t {right-of} C-p C-j <CR><CR>
 endif
 
 let g:lightline = {
             \ 'colorscheme': 'solarized',
         \ }
+
+" Force refresh the buffer when it has been modified externally
+nmap <Leader>ee :e!<CR>
+
+nmap <Leader>cc <plug>NERDCommenterTogle
