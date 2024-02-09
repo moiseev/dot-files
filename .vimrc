@@ -105,12 +105,6 @@ nnoremap <silent> <Leader>cP :cpf<CR>
 nnoremap j gj
 nnoremap k gk
 
-"map <C-h> <C-w>h
-"map <C-j> <C-w>j
-"map <C-k> <C-w>k
-"map <C-l> <C-w>l
-
-
 nmap <silent> <ESC><ESC> :nohlsearch<CR>
 nnoremap <silent> <space> za
 
@@ -217,8 +211,8 @@ endif
 
 " tmux repeat last action
 if executable('tmux')
-    nnoremap <silent> \r :echo "Gotta use the leader!<CR>
-    nnoremap <silent> <Leader>r :!tmux send-keys -t {right-of} C-p C-j <CR><CR>
+    nnoremap <silent> \r :echo "Gotta use the leader!"<CR>
+    nnoremap <silent> <Leader>rr :!tmux send-keys -t {right-of} C-p C-j <CR><CR>
 endif
 
 let g:lightline = {
