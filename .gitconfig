@@ -13,6 +13,8 @@
   d = diff --color
   ds = diff --staged --color
   dag = log --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative
+  rc = rebase --continue
+  ra = rebase --abort
 
 [push]
 	default = simple
