@@ -52,3 +52,6 @@
 [submodule ".vim/pack/moiseev/start/vim-solarized8"]
 	path = .vim/pack/moiseev/start/vim-solarized8
 	url = https://github.com/lifepillar/vim-solarized8.git
+[submodule ".vim/pack/moiseev/start/bufexplorer"]
+	path = .vim/pack/moiseev/start/bufexplorer
+	url = https://github.com/jlanzarotta/bufexplorer.git
