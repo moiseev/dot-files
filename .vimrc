@@ -223,3 +223,8 @@ let g:lightline = {
 nmap <Leader>ee :e!<CR>
 
 nmap <Leader>cc <plug>NERDCommenterTogle
+
+" Enable the optional plugin bundled in
+packadd! editorconfig
+set matchpairs=(:),{:},[:],<:>
+runtime macros/matchit.vim
