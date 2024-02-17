@@ -55,3 +55,6 @@
 [submodule ".vim/pack/moiseev/start/bufexplorer"]
 	path = .vim/pack/moiseev/start/bufexplorer
 	url = https://github.com/jlanzarotta/bufexplorer.git
+[submodule ".vim/pack/moiseev/start/vim-markdown"]
+	path = .vim/pack/moiseev/start/vim-markdown
+	url = https://github.com/preservim/vim-markdown.git
