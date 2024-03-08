@@ -222,7 +222,7 @@ let g:lightline = {
 " Force refresh the buffer when it has been modified externally
 nmap <Leader>ee :e!<CR>
 
-nmap <Leader>cc <plug>NERDCommenterTogle
+nmap <Leader>cc <plug>NERDCommenterToggle
 
 " Enable the optional plugin bundled in
 packadd! editorconfig
