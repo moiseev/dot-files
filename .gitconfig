@@ -1,6 +1,7 @@
 [user]
 	name = Max Moiseev
 	email = max@maxmoiseev.com
+
 [alias]
   ci = commit
   cim = commit -m
@@ -16,6 +17,8 @@
   rc = rebase --continue
   ra = rebase --abort
 
+# For many options with explanations see:
+# https://jvns.ca/blog/2024/02/16/popular-git-config-options/
 [push]
 	default = current
 [color]
