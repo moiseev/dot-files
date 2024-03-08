@@ -17,7 +17,7 @@
   ra = rebase --abort
 
 [push]
-	default = simple
+	default = current
 [color]
 	ui = true
 [filter "lfs"]
@@ -27,3 +27,16 @@
 	required = true
 [safe]
 	directory = /opt/homebrew
+[rebase]
+    autostash = true
+[init]
+    defaultBranch = main
+[commit]
+    verbuse = true
+[diff]
+    algorithm = histogram
+    submodule = log
+[merge]
+    conflictstyle = zdiff3
+[status]
+    submoduleSummary =true
