@@ -39,6 +39,7 @@
 [diff]
     algorithm = histogram
     submodule = log
+    tool = difftastic
 [merge]
     conflictstyle = zdiff3
 [status]
