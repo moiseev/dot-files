@@ -35,7 +35,7 @@
 [init]
     defaultBranch = main
 [commit]
-    verbuse = true
+    verbose = true
 [diff]
     algorithm = histogram
     submodule = log
