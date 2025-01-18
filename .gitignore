@@ -5,4 +5,8 @@
 tags
 .tmux/plugins/tmux-*
 .tmux/resurrect
+.tmux/plugins/tmux2k
 *.beam
+.config/zed/conversations
+.config/zed/prompts
+.config/zed/themes
