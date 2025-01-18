@@ -40,7 +40,5 @@
     algorithm = histogram
     submodule = log
     tool = difftastic
-[merge]
-    conflictstyle = zdiff3
 [status]
-    submoduleSummary =true
+    submoduleSummary = true

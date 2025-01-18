@@ -12,7 +12,7 @@ set tabstop=4
 set expandtab
 set iminsert=0
 set imsearch=-1
-set iskeyword=@,48-57,_,192,255
+set iskeyword=@,48-57,_
 imap <C-\> <C-^>
 cmap <C-\> <C-^>
 set encoding=utf-8
@@ -45,16 +45,17 @@ endif
 
 set hlsearch
 set cursorline
-set foldenable
+set nofoldenable
 set foldmethod=manual
 set number
 
-if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
+if $TERM =~ "-256-color" || $COLORTERM == "gnome-terminal"
     set t_Co=256
 endif
 
 set guifont="JetBrains Mono":h13
 set shell=fish
+set bg=dark
 colo solarized8
 
 filetype on
@@ -106,7 +107,7 @@ nnoremap j gj
 nnoremap k gk
 
 nmap <silent> <ESC><ESC> :nohlsearch<CR>
-nnoremap <silent> <space> za
+"nnoremap <silent> <space> za
 
 nmap <silent> <Leader>n :NERDTreeToggle<CR>
 nmap <silent> <Leader>1 :NERDTreeToggle<CR>
@@ -185,13 +186,6 @@ nnoremap <leader>a :Ack!<space>
 nnoremap <leader>* :Ack!<cr>
 "nnoremap <leader>af :AckFromSearch!<cr>
 
-if exists('g:NERDDelimiterMap') 
-    call extend(g:NERDDelimiterMap, {
-            \ 'swift':    {'left': '//', 'leftAlt': '/*', 'rightAlt': '*/'},
-            \ 'swiftgyb': {'left': '//', 'leftAlt': '/*', 'rightAlt': '*/'}
-            \ })
-endif
-
 " UI
 set wildmenu
 set wildmode=longest:full,full
@@ -215,9 +209,7 @@ if executable('tmux')
     nnoremap <silent> <Leader>rr :!tmux send-keys -t {right-of} C-p C-j <CR><CR>
 endif
 
-let g:lightline = {
-            \ 'colorscheme': 'solarized',
-        \ }
+let g:lightline = { 'colorscheme': 'darcula' }
 
 " Force refresh the buffer when it has been modified externally
 nmap <Leader>ee :e!<CR>
