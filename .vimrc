@@ -2,8 +2,6 @@ set nocompatible
 
 language messages C
 
-behave mswin
-
 set nobackup
 set noswapfile
 set ignorecase
@@ -49,7 +47,7 @@ set nofoldenable
 set foldmethod=manual
 set number
 
-if $TERM =~ "-256-color" || $COLORTERM == "gnome-terminal"
+if $TERM =~ ".*-256color$" || $COLORTERM == "gnome-terminal"
     set t_Co=256
 endif
 
@@ -57,6 +55,7 @@ set guifont="JetBrains Mono":h13
 set shell=fish
 set bg=dark
 colo solarized8
+set bg=dark
 
 filetype on
 filetype plugin on
@@ -216,7 +215,9 @@ nmap <Leader>ee :e!<CR>
 
 nmap <Leader>cc <plug>NERDCommenterToggle
 
-" Enable the optional plugin bundled in
-packadd! editorconfig
-set matchpairs=(:),{:},[:],<:>
-runtime macros/matchit.vim
+if !has('nvim')
+    " neovim has this already
+    packadd! editorconfig
+    set matchpairs=(:),{:},[:],<:>
+    runtime macros/matchit.vim
+endif
