@@ -9,4 +9,5 @@ config.macos_window_background_blur = 20
 config.font = wezterm.font 'JetBrains Mono'
 config.font_size = 14.0
 
+config.default_prog = { '/opt/homebrew/bin/fish', '-l' }
 return config
