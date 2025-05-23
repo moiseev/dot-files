@@ -58,3 +58,6 @@
 [submodule ".vim/pack/moiseev/start/vim-markdown"]
 	path = .vim/pack/moiseev/start/vim-markdown
 	url = https://github.com/preservim/vim-markdown.git
+[submodule ".vim/pack/moiseev/start/vim-catppuccin"]
+	path = .vim/pack/moiseev/start/vim-catppuccin
+	url = https://github.com/catppuccin/vim.git
