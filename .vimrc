@@ -213,11 +213,12 @@ let g:lightline = { 'colorscheme': 'darcula' }
 " Force refresh the buffer when it has been modified externally
 nmap <Leader>ee :e!<CR>
 
-nmap <Leader>cc <plug>NERDCommenterToggle
+nmap <Leader>cc :echo "Nope. Learn to use built-in comments!"<CR>
 
 if !has('nvim')
     " neovim has this already
     packadd! editorconfig
     set matchpairs=(:),{:},[:],<:>
     runtime macros/matchit.vim
+    packadd! comment
 endif
