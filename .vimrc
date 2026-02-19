@@ -66,10 +66,10 @@ let g:tex_flavor='latex'
 let mapleader=","
 let g:mapleader=","
 
-nmap <silent> <Leader>ev :e $MYVIMRC<CR>
-nmap <silent> <Leader>sv :so $MYVIMRC<CR> 
+nmap <silent> <Leader>ev :edit $MYVIMRC<CR>
+nmap <silent> <Leader>sv :source $MYVIMRC<CR>
 
-nnoremap <silent> <TAB><TAB> :set invwrap<CR>
+nnoremap <silent> <Leader><TAB> :set invwrap<CR>
 
 nnoremap ; :
 nnoremap <silent> <Leader>ln :set invnu<CR>
