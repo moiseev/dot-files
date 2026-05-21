@@ -79,6 +79,9 @@ nnoremap <silent> <Leader>\ :s/\\/\\\\/g<CR>
 
 nmap <silent> <S-Tab> :bnext<CR>
 nnoremap <silent> <C-h> :b#<CR>
+nnoremap <silent> <C-j> :bn<CR>
+nnoremap <silent> <C-k> :bp<CR>
+
 nnoremap <silent> <Leader>ww :BD<CR>
 nnoremap <silent> <Leader>w! :BD!<CR>
 nnoremap <silent> <Leader>wq :BD!<CR>
@@ -160,7 +163,9 @@ set laststatus=2
 "   %V current virtual column number (-n), if different from %c
 "   %P percentage through buffer
 "   %) end of width specification
-set statusline=%<\ %n:%f\ %m%r%y\ \[%{&enc}\]\ \[%{&fenc}\]%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
+"
+" Uncomment this in case lightline goes missing
+" set statusline=%<\ %n:%f\ %m%r%y\ \[%{&enc}\]\ \[%{&fenc}\]%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
 
 set wildignore=*.o,*.exe,*.obj,*.pyc,*.pyd,*.hsi,*.beam,*.dll,*.class,.DS_Store
 
