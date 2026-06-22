@@ -196,10 +196,11 @@ set wildmode=longest:full,full
 set wildignore+=*.so,*.zip,*.o,*.a
 set wildignore+=.git\*,.hg\*,.svn\*
 
-" fzf
-set rtp+=/opt/homebrew/opt/fzf
-nnoremap <Leader>p :Files<CR>
-nnoremap <leader>g :GFiles<CR>
+if executable('fzf')
+    let g:fzf_binary = exepath('fzf')
+    nnoremap <Leader>p :Files<CR>
+    nnoremap <leader>g :GFiles<CR>
+endif
 
 " include any local configuration
 let local_config = expand('~/.vim_local')

@@ -61,3 +61,6 @@
 [submodule ".vim/pack/moiseev/start/vim-catppuccin"]
 	path = .vim/pack/moiseev/start/vim-catppuccin
 	url = https://github.com/catppuccin/vim.git
+[submodule ".vim/pack/moiseev/start/fzf"]
+	path = .vim/pack/moiseev/start/fzf
+	url = https://github.com/junegunn/fzf.git
