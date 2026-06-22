@@ -50,7 +50,6 @@
   };
 
   imports = [
-    ./modules/aerospace
     ./modules/wezterm
   ];
 
