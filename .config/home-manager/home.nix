@@ -4,7 +4,12 @@
   home = {
     inherit homeDirectory stateVersion username;
 
+    packages = [
+      pkgs.just
+    ];
+
     shellAliases = {
+      ",j" = "just";
     };
   };
 
