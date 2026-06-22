@@ -178,8 +178,8 @@ au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 nnoremap <silent> <Leader>rp :RainbowParenthesesToggle<CR>
 
-if executable('ag')
-    let g:ackprg = 'ag --vimgrep'
+if executable('rg')
+    let g:ackprg = 'rg --vimgrep'
 endif
 
 cnoreabbrev Ack Ack!
