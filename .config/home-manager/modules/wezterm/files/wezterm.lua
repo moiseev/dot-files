@@ -10,7 +10,10 @@ config.macos_window_background_blur = 20
 config.font = wezterm.font 'JetBrains Mono'
 config.font_size = 14.0
 
-config.default_prog = { '/opt/homebrew/bin/fish', '-l' }
+-- Select the tmux pane on first click when inactive
+config.swallow_mouse_click_on_window_focus = false
+
+config.default_prog = { '/usr/bin/env', 'fish', '-l' }
 
 wezterm.on('gui-startup', function (cmd)
   local tab, pane, window = wezterm.mux.spawn_window(cmd or {})
