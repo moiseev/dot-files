@@ -13,7 +13,7 @@ config.font_size = 14.0
 -- Select the tmux pane on first click when inactive
 config.swallow_mouse_click_on_window_focus = false
 
-config.default_prog = { '/usr/bin/env', 'fish', '-l' }
+config.default_prog = { '/opt/homebrew/bin/fish', '-l' }
 
 wezterm.on('gui-startup', function (cmd)
   local tab, pane, window = wezterm.mux.spawn_window(cmd or {})
