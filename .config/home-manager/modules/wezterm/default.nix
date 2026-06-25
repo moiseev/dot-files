@@ -7,7 +7,7 @@
 
 {
   programs.wezterm = {
-    enable = false;
+    enable = true;
     package = pkgs.wezterm;
   };
 
