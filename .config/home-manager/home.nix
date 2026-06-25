@@ -30,6 +30,7 @@
         pandoc
         ripgrep
         tig
+        vim
         watchexec
         wget
         yazi
