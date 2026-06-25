@@ -53,6 +53,11 @@
     ./modules/wezterm
   ];
 
+  targets.darwin = pkgs.lib.mkIf pkgs.stdenv.hostPlatform.isDarwin {
+    copyApps.enable = true;
+    linkApps.enable = false;
+  };
+
   programs = {
     home-manager = {
       enable = true;
