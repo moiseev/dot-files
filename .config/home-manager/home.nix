@@ -24,6 +24,7 @@
         fd
         fzf
         gh
+        haskellPackages.hell
         jq
         just
         lnav
