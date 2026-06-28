@@ -1,1 +1,1 @@
-/Users/moiseev/.nix-profile/share/fzf/key-bindings.fish
+../../../.vim/pack/moiseev/start/fzf/shell/key-bindings.fish
