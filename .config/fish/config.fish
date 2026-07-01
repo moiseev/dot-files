@@ -5,3 +5,7 @@ end
 
 # Using a global variable so that $HOME is expanded
 set -g --prepend fish_user_paths $HOME/bin $HOME/.cargo/bin $HOME/.ghcup/bin $HOME/.cabal/bin $HOME/.local/bin
+
+set -gx RIPGREP_CONFIG_PATH $HOME/.ripgreprc
+
+zoxide init fish | source
