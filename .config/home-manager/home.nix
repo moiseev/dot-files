@@ -52,6 +52,10 @@
 
     file = {
       ".ripgreprc".source = ./files/ripgreprc;
+      ".config/yabai/yabairc" = {
+        source = ./files/yabairc;
+        executable = true;
+      };
     };
 
     # NOTE: fish does not source home-manager's hm-session-vars.sh (it's POSIX
