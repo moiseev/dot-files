@@ -39,7 +39,7 @@
         zoxide
       ]
       ++ pkgs.lib.optionals pkgs.stdenv.hostPlatform.isDarwin [
-        reattach-to-user-namespace
+        yabai
       ];
 
     shellAliases = {
