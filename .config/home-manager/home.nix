@@ -69,6 +69,7 @@
   };
 
   imports = [
+    ./modules/hammerspoon
     ./modules/wezterm
   ];
 
