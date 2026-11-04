@@ -5,5 +5,6 @@ require("hs.ipc")
 hs.urlevent.bind("reload", function() hs.reload() end)
 
 require("wm")
+require("focus")
 
 hs.alert.show("Hammerspoon config loaded")
