@@ -37,6 +37,7 @@
         yazi
         yq
         zoxide
+        zmx
       ]
       ++ pkgs.lib.optionals pkgs.stdenv.hostPlatform.isDarwin [
         yabai

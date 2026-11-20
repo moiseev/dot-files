@@ -64,3 +64,6 @@
 [submodule ".vim/pack/moiseev/start/fzf"]
 	path = .vim/pack/moiseev/start/fzf
 	url = https://github.com/junegunn/fzf.git
+[submodule ".vim/pack/moiseev/start/gruvbox"]
+	path = .vim/pack/moiseev/start/gruvbox
+	url = https://github.com/morhetz/gruvbox.git

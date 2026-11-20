@@ -54,8 +54,12 @@ endif
 set guifont="JetBrains Mono":h13
 set shell=fish
 set bg=dark
-colo solarized8
-set bg=dark
+if &diff
+    colo gruvbox
+    let g:gruvbox_contrast_dark='light'
+else
+    colo solarized8
+endif
 
 filetype on
 filetype plugin on
