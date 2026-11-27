@@ -42,6 +42,8 @@
 [diff]
     algorithm = histogram
     submodule = log
-    tool = difftastic
+    tool = vimdiff
+[difftool]
+    prompt = false
 [status]
     submoduleSummary = true
