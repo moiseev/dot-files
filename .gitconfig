@@ -9,8 +9,9 @@
   co = checkout
   st = status --short
   glog = log --graph --oneline
-  l5 = log --graph --oneline -n5
-  l10 = log --graph --oneline -n10
+  l = log --graph --oneline -n5
+  ll = log --graph --oneline -n10
+  lll = log --graph --oneline -n20
   d = diff --color
   dt = difftool
   ds = diff --staged --color
